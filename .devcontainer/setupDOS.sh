@@ -28,3 +28,13 @@ echo "🏗️  Configurando el proyecto CMake..."
 mkdir -p build
 cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug
 echo "✅ Entorno listo. Usa 'cmake --build build' para compilar."
+
+pkill -f "tigervncserver :1" || true
+pkill -f "Xtigervnc :1" || true
+
+nohup bash -c 'while :; do
+  echo [$(date)] Process started.
+  tigervncserver :1 -geometry 1440x768 -depth 24 -rfbport 5901 -dpi 96 -localhost -desktop fluxbox -fg -SecurityTypes None
+  echo [$(date)] Process exited!
+  sleep 5
+done' >/home/vscode/.vnc-loop.log 2>&1 &
