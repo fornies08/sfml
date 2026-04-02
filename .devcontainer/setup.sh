@@ -1,5 +1,8 @@
 #!/bin/bash
-set -e
+set -ex
+
+LOGFILE="$HOME/inicio.log"
+exec > >(tee -a "$LOGFILE") 2>&1
 
 echo "🔧 Instalando dependencias del sistema..."
 sudo apt-get update -y
