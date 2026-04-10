@@ -28,23 +28,6 @@ void Beltran::mover(sf::Vector2f direccion, float dt)
     sprite.move(direccion * velocidad * dt);
 }
 
-void Beltran::setVelocidad(float v) { velocidad = v; }
-
-void Beltran::setEscala(float escala)
-{
-    sprite.setScale(escala, escala);
-}
-
-void Beltran::setRotacion(float angulo)
-{
-    sprite.setRotation(angulo);
-}
-
-void Beltran::rotar(float grados)
-{
-    sprite.rotate(grados);
-}
-
 sf::Vector2f Beltran::getPosicion() const
 {
     return sprite.getPosition();
