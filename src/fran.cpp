@@ -27,3 +27,7 @@ void Fran::mover(sf::Vector2f direccion, float dt)
 {
     sprite.move(direccion * velocidad * dt);
 }
+void Fran::dibujar(sf::RenderWindow &ventana) const
+{
+    ventana.draw(sprite);
+}
