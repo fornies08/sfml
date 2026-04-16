@@ -3,7 +3,7 @@
 Uriel::Uriel(sf::Vector2f posicion)
     : velocidad(150.f), listo(false)
 {
-   if (!textura.loadFromFile("sprite4.png"))
+   if (!textura.loadFromFile("sprite3.png"))
         return; // listo queda en false
 
     textura.setSmooth(false);
