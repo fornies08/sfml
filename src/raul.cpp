@@ -28,6 +28,11 @@ void Raul::mover(sf::Vector2f direccion, float dt)
     sprite.move(direccion * velocidad * dt);
 }
 
+sf::Vector2f Raul::getPosicion() const
+{
+    return sprite.getPosition();
+}
+
 void Raul::dibujar(sf::RenderWindow &ventana) const
 {
         ventana.draw(sprite);
